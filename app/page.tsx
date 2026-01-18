@@ -40,16 +40,11 @@ export default function Home() {
               <Link
                 key={topic.slug}
                 href={`/${topic.slug}`}
-                className={`group relative block p-8 md:p-10 border-3 ${color.border} hover:border-[#1a1a16] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 ${color.bg}`}
+                className={`card-hover group relative block p-8 md:p-10 border-3 ${color.border} hover:border-[#1a1a16] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 ${color.bg}`}
                 style={{
                   animation: `slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s both`,
-                  boxShadow: `5px 5px 0px 0px ${color.shadow}`
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `8px 8px 0px 0px ${color.shadow}`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = `5px 5px 0px 0px ${color.shadow}`;
+                  boxShadow: `5px 5px 0px 0px ${color.shadow}`,
+                  ['--shadow-color' as any]: color.shadow
                 }}
               >
                 <div className="mb-4 text-sm font-bold tracking-wider" style={{color: color.accent}}>
