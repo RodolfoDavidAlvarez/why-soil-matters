@@ -2,37 +2,54 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      <div className="container mx-auto px-4 py-16">
-        <header className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-green-900 mb-4">
+    <main className="min-h-screen">
+      <div className="max-w-5xl mx-auto px-6 py-20">
+        <header className="mb-20">
+          <h1 className="text-6xl md:text-7xl mb-6 text-stone-900">
             Why Soil Matters
           </h1>
-          <p className="text-xl text-green-700 max-w-2xl mx-auto">
+          <p className="text-xl text-stone-600 max-w-2xl leading-relaxed">
             Understanding the biological foundation of regenerative agriculture in Arizona
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {topics.map((topic) => (
+        <div className="space-y-1">
+          {topics.map((topic, index) => (
             <Link
               key={topic.slug}
               href={`/${topic.slug}`}
-              className="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-green-600"
+              className="group block border-t border-stone-200 py-8 hover:bg-stone-50 transition-colors"
             >
-              <h2 className="text-xl font-bold text-green-900 mb-2 group-hover:text-green-700">
-                {topic.title}
-              </h2>
-              <p className="text-gray-600 text-sm mb-4">{topic.preview}</p>
-              <span className="text-green-600 text-sm font-semibold">
-                Read more →
-              </span>
+              <div className="flex items-start justify-between gap-8">
+                <div className="flex-1">
+                  <h2 className="text-2xl md:text-3xl mb-3 text-stone-900 group-hover:text-[#264027] transition-colors">
+                    {topic.title}
+                  </h2>
+                  <p className="text-stone-600 leading-relaxed">
+                    {topic.preview}
+                  </p>
+                </div>
+                <div className="hidden md:flex items-center text-stone-400 group-hover:text-[#264027] transition-colors">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
             </Link>
           ))}
+          <div className="border-t border-stone-200"></div>
         </div>
 
-        <footer className="mt-16 text-center text-gray-600">
-          <p>A resource by <a href="https://soilseedandwater.com" className="text-green-600 hover:underline">Soil Seed & Water</a></p>
+        <footer className="mt-20 pt-12 border-t border-stone-200 text-center text-stone-500">
+          <p>
+            A resource by{' '}
+            <a
+              href="https://soilseedandwater.com"
+              className="text-[#264027] hover:underline"
+            >
+              Soil Seed & Water
+            </a>
+          </p>
         </footer>
       </div>
     </main>
