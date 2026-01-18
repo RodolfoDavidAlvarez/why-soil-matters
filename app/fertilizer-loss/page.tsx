@@ -2,10 +2,14 @@ import Link from 'next/link'
 
 export default function FertilizerLoss() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      {/* Subtle texture background */}
-      <div className="fixed inset-0 opacity-[0.015] pointer-events-none"
-           style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+    <main className="min-h-screen relative overflow-hidden bg-[#f5f1e8]">
+      {/* Colorful texture background */}
+      <div className="fixed inset-0 opacity-[0.03] pointer-events-none"
+           style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23264027' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+
+      {/* Decorative color blocks */}
+      <div className="fixed top-20 right-0 w-32 h-32 bg-[#264027] opacity-10 pointer-events-none"></div>
+      <div className="fixed bottom-40 left-0 w-24 h-24 bg-[#8b6f47] opacity-10 pointer-events-none"></div>
 
       <article className="relative max-w-4xl mx-auto px-6 py-12 md:py-20">
         <Link
@@ -146,10 +150,35 @@ export default function FertilizerLoss() {
             </a>
           </div>
 
-          <p style={{fontSize: '0.9375rem', color: '#78716c', borderTop: '1px solid #e7e5e4', paddingTop: '2rem', marginTop: '3rem'}}>
-            Questions about implementing biological soil health on your operation?{' '}
-            <a href="mailto:ralvarez@soilseedandwater.com">Contact us</a> for a free consultation.
-          </p>
+          <div className="mt-16 pt-12 border-t-2 border-[#1a1a16]">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-[#264027] p-6 border-2 border-[#1a1a16] shadow-[4px_4px_0px_0px_rgba(26,26,22,1)]">
+                <h3 className="text-xl font-bold text-[#f5f1e8] mb-3">Need Help?</h3>
+                <p className="text-[#e8f4e8] mb-4">
+                  Questions about implementing biological soil health on your operation? Get a free consultation.
+                </p>
+                <a
+                  href="mailto:ralvarez@soilseedandwater.com"
+                  className="inline-flex items-center gap-2 text-[#f5f1e8] font-bold border-2 border-[#f5f1e8] px-4 py-2 hover:bg-[#f5f1e8] hover:text-[#264027] transition-all text-sm"
+                >
+                  Contact SSW
+                </a>
+              </div>
+
+              <div className="bg-[#8b6f47] p-6 border-2 border-[#1a1a16] shadow-[4px_4px_0px_0px_rgba(26,26,22,1)]">
+                <h3 className="text-xl font-bold text-white mb-3">Shop Products</h3>
+                <p className="text-[#f5f1e8] mb-4">
+                  Premium worm castings, compost blends, and biological inputs for Arizona growers.
+                </p>
+                <a
+                  href="https://organicsoilwholesale.com"
+                  className="inline-flex items-center gap-2 text-white font-bold border-2 border-white px-4 py-2 hover:bg-white hover:text-[#8b6f47] transition-all text-sm"
+                >
+                  Shop Wholesale
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
     </main>
