@@ -2,23 +2,30 @@ import Link from 'next/link'
 
 export default function FertilizerLoss() {
   return (
-    <main className="min-h-screen">
-      <article className="max-w-3xl mx-auto px-6 py-16">
+    <main className="min-h-screen relative overflow-hidden">
+      {/* Subtle texture background */}
+      <div className="fixed inset-0 opacity-[0.015] pointer-events-none"
+           style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+
+      <article className="relative max-w-4xl mx-auto px-6 py-12 md:py-20">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-stone-600 hover:text-[#264027] mb-12 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 border-2 border-[#1a1a16] hover:border-[#264027] hover:translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(38,64,39,1)] transition-all mb-12 bg-white font-semibold"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
           Back
         </Link>
 
-        <header className="mb-16">
-          <h1 className="text-5xl md:text-6xl mb-6 text-stone-900 leading-tight">
+        <header className="mb-16 md:mb-20">
+          <div className="inline-block mb-6 px-4 py-1.5 bg-[#264027] text-white text-sm font-medium tracking-wide">
+            ARTICLE 01
+          </div>
+          <h1 className="text-5xl md:text-7xl mb-8 leading-[1.05] text-[#1a1a16]">
             Why 60% of Your Fertilizer Never Reaches Your Crops
           </h1>
-          <p className="text-xl text-stone-600 leading-relaxed">
+          <p className="text-2xl text-[#8b6f47] leading-relaxed font-medium">
             The biological bridge is broken. Here's the science behind nutrient loss and how to fix it.
           </p>
         </header>
