@@ -5,7 +5,7 @@ export default function USDACompostingBet() {
     <main className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 py-16">
         <Link href="/" className="text-green-600 hover:text-green-700 mb-8 inline-block">
-          ← Back to all topics
+          &larr; Back to all topics
         </Link>
 
         <header className="mb-12">

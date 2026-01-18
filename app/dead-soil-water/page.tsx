@@ -5,7 +5,7 @@ export default function DeadSoilWater() {
     <main className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 py-16">
         <Link href="/" className="text-green-600 hover:text-green-700 mb-8 inline-block">
-          ← Back to all topics
+          &larr; Back to all topics
         </Link>
 
         <header className="mb-12">
@@ -100,7 +100,7 @@ export default function DeadSoilWater() {
               </li>
             </ul>
             <p className="text-gray-700 leading-relaxed">
-              The pattern: Extract groundwater → Grow crops in dead soil → Water runs through without retention →
+              The pattern: Extract groundwater &rarr; Grow crops in dead soil &rarr; Water runs through without retention &rarr;
               Pump more water. It's a death spiral.
             </p>
           </section>

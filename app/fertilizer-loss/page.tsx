@@ -5,7 +5,7 @@ export default function FertilizerLoss() {
     <main className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 py-16">
         <Link href="/" className="text-green-600 hover:text-green-700 mb-8 inline-block">
-          ê Back to all topics
+          &larr; Back to all topics
         </Link>
 
         <header className="mb-12">
@@ -146,7 +146,7 @@ export default function FertilizerLoss() {
                 You're starting from scratch.
               </li>
               <li>
-                <strong>Extreme heat</strong> stresses soil biology. Summer temperatures above 110∞F require protective strategies
+                <strong>Extreme heat</strong> stresses soil biology. Summer temperatures above 110ÔøΩF require protective strategies
                 like mulching and shade.
               </li>
               <li>
